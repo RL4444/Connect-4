@@ -1,0 +1,147 @@
+* {
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 0px;
+}
+
+.slot {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    padding: 10px;
+    margin: 0px;
+}
+
+.hole {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: white;
+    margin: 0px;
+}
+
+.slot.player1 .hole {
+    background-color: red;
+}
+.slot.player2 .hole {
+    background-color: black;
+}
+.column {
+    margin-top: 25%;
+    display: inline-block;
+    margin-left: -4px;
+}
+#winner-screen {
+    position: fixed;
+    /* fixed is poisitoning something in the window whereas absolute is on the overall page */
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    display: none;
+}
+
+.player1screen {
+    position: fixed;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: red;
+    top: 10%;
+    width: 100%;
+    height: 70%;
+    max-width: 100%;
+    max-height: 700px;
+    left: 0;
+    font-family: "Anton", sans-serif;
+    color: white;
+    text-transform: full-width;
+    font-size: 120px;
+    display: none;
+    animation-name: shrink;
+    animation-duration: 2s;
+}
+
+.player2screen {
+    position: fixed;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: black;
+    top: 10%;
+    width: 100%;
+    height: 70%;
+    max-width: 100%;
+    max-height: 700px;
+    left: 0%;
+    font-family: "Anton", sans-serif;
+    text-transform: full-width;
+    color: white;
+    font-size: 120px;
+    display: none;
+    animation-name: shrink;
+    animation-duration: 2s;
+}
+button {
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+.shrink {
+    transform: scale(0.1);
+}
+.button:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
+.shake {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+.tenor-gif-embed {
+    margin-left: -4px;
+    display: inline-block;
+    text-align: center;
+    min-width: 300px;
+    max-width: 300px;
+    overflow: hidden;
+}
